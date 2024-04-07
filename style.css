@@ -7,7 +7,6 @@
 /*   ////////////////////////////////////// CONTENEDOR DE TODO ////////////////////////////////// */
 
 .containerGral { /* EQUIVALE A BODY */
-  /*   border: 10px solid red; */
   max-width: 95%;
   margin: 0 auto;
 }
@@ -24,7 +23,8 @@
   font-family: Poppins, sans-serif;
   font-size: 1em; /* Parece no incidir en nada. */
   font-weight: 600;
-  padding: 0 0.3em;
+  padding: 0.5em 5em;
+  align-items: center;
 }
 
 /* Contenedor del logo y nombre del sitio. */
@@ -181,6 +181,7 @@
   object-fit: cover;
   object-position: center;
   opacity: 95%;
+  z-index: -1;
 }
 
 .decorative-dots {
@@ -489,6 +490,7 @@
 /*   ////////////////////////////////////// BUSCADOR ////////////////////////////////// */
 
 .search-container {
+  position: relative;
   border-radius: 3em;
   box-shadow: 0 0.75em 2.5em 0 rgba(0, 0, 0, 0.05);
   background-color: #fff;
@@ -501,6 +503,7 @@
   max-width: 75em;
   flex-direction: column;
   padding: 2.5em 2em;
+  border: 1px solid#354393;
 }
 
 @media (max-width: 991px) {
@@ -541,11 +544,14 @@
 }
 
 .search-input {
-  font-family: Inter, sans-serif;
-  border-radius: 0.1875em;
-  background-color: rgba(249, 249, 249, 0.9);
-  letter-spacing: 0.1px;
+  font-family: Poppins, sans-serif;
+  min-width: 30%;
+  border: none;
+  border-radius: 0.1em;
+  background-color: #fafafa;
   padding: 1.375em 1em;
+  letter-spacing: 0.1px;
+
 }
 
 @media (max-width: 991px) {
@@ -555,11 +561,13 @@
 }
 
 .search-category {
-  font-family: Inter, sans-serif;
-  border-radius: 0.1875em;
-  background-color: rgba(249, 249, 249, 0.9);
+  font-family: Poppins, sans-serif;
+  min-width: 30%;
+  border: none;
+  border-radius: 0.1em;
+  background-color: #fafafa;
+  padding: 1.375em 1em;
   letter-spacing: 0.1px;
-  padding: 1.3125em 1em;
 }
 
 @media (max-width: 991px) {
@@ -569,11 +577,13 @@
 }
 
 .search-specialty {
-  font-family: Inter, sans-serif;
-  border-radius: 0.1875em;
-  background-color: rgba(249, 249, 249, 0.9);
-  letter-spacing: 0.1px;
+  font-family: Poppins, sans-serif;
+  min-width: 10%;
+  border: none;
+  border-radius: 0.1em;
+  background-color: #fafafa;
   padding: 1.375em 1em;
+  letter-spacing: 0.1px;
 }
 
 @media (max-width: 991px) {
@@ -583,12 +593,13 @@
 }
 
 .search-button {
-  border-radius: 1.125em;
+  border-radius: 1em;
   background-color: #2596be;
   color: #000;
   white-space: nowrap;
-  padding: 0.75em 1.5em;
-  font: 700 1.25em/130% Aleo, sans-serif;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  padding: 1.2em 2em;
   cursor: pointer;
 }
 
@@ -602,13 +613,15 @@
 /*   ////////////////////////////////////// CARRERAS MÁS BUSCADAS ////////////////////////////////// */
 
 .carreras-mas-buscadas {
+  margin-top: -11.3em;
   max-width: 100%;
   align-items: center;
   background-color: #31332c;
   display: flex;
   flex-direction: column;
-  padding: 5em;
-  z-index: 10;
+  /* padding: 15em; */
+  z-index: -10;
+
 }
 
 @media (max-width: 991px) {
@@ -619,6 +632,7 @@
 }
 
 .carreras-mas-buscadas-title {
+  margin-top: 5em;
   color: #2596be;;
   font: 700 3em/120% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
   text-align: center;
@@ -645,6 +659,7 @@
   margin-top: 5em;
   padding: 0.5em;
   white-space: nowrap;
+  
 }
 
 @media (max-width: 991px) {
@@ -661,6 +676,7 @@
   flex-basis: auto;
   flex-grow: 1;
   gap: 0;
+  
 }
 
 @media (max-width: 991px) {
@@ -673,9 +689,10 @@
 .carreras-filter-item {
   background-color: #f4f4f4;
   border-radius: 2.5em;
-  font-family: Inter, sans-serif;
+  font-family: Poppins, sans-serif;
   justify-content: center;
   padding: 1em;
+  
 }
 
 .carreras-filter-item--active {
@@ -690,10 +707,13 @@
 }
 
 .carreras-list {
-  align-self: stretch;
+  align-self: center;
   display: flex;
   gap: 1.25em;
   margin-top: 5em;
+  max-width: 85%;
+  
+  
 }
 
 @media (max-width: 991px) {
@@ -707,13 +727,15 @@
 }
 
 .carrera-card {
+  font-size: 0.9em;
   border-radius: 1em;
-  color: #fff;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   line-height: 120%;
   margin-left: 0;
   width: 25%;
+
 }
 
 @media (max-width: 991px) {
@@ -729,12 +751,14 @@
   object-fit: auto;
   object-position: center;
   width: 100%;
+
 }
 
 .carrera-card-content {
   display: flex;
   flex-direction: column;
   padding: 1em 1.5em;
+  
 }
 
 @media (max-width: 991px) {
@@ -756,6 +780,7 @@
   letter-spacing: 0.28px;
   margin-top: 1.5em;
   width: 100%;
+  
 }
 
 .carrera-card-detail {
@@ -766,33 +791,39 @@
 .carrera-card-detail-icon {
   aspect-ratio: 1;
   fill: #ffb31f;
-  object-fit: auto;
+  object-fit: contain;
   object-position: center;
-  width: 1.0625em;
+  width: 1.3em;
+  
 }
 
 .carrera-card-detail-text {
-  font-family: Inter, sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 .carrera-card-footer {
   display: flex;
-  font-size: 1.25em;
+  font-size: 1.2em;
   font-weight: 700;
   gap: 1em;
   letter-spacing: 0.4px;
-  margin-top: 1.5em;
+  margin-top: 1em;
+  padding: 0.3em;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .carrera-card-price {
   flex: 1;
-  font-family: Inter, sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 .carrera-card-rating {
   display: flex;
   gap: 0.25em;
   white-space: nowrap;
+
 }
 
 @media (max-width: 991px) {
@@ -810,7 +841,11 @@
 }
 
 .carrera-card-rating-text {
-  font-family: Inter, sans-serif;
+  display: flex;
+  font-family: Poppins, sans-serif;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .ver-todas-carreras {
@@ -825,6 +860,7 @@
   letter-spacing: 0.4px;
   line-height: 120%;
   margin-top: 5em;
+  margin-bottom: 5em;
   padding: 1.5em;
 }
 
@@ -836,7 +872,7 @@
 }
 
 .ver-todas-carreras-text {
-  font-family: Inter, sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 .ver-todas-carreras-icon {
@@ -930,6 +966,7 @@
   display: flex;
   flex-direction: column;
   padding: 3.1875em 2.1875em 5em 2.75em;
+
 }
 
 @media (max-width: 991px) {
@@ -953,9 +990,12 @@
 }
 
 .benefits-container {
-  max-width: 90%;
-  margin: 0 auto;
+  
+  width: 100%;
+
+  display: flex;  
   margin-top: 4.625em;
+  padding-left: 3.5em;
 
 }
 
@@ -968,10 +1008,11 @@
 
 .benefits-row {
   margin-right: 6%;
-  gap: 5.25em;
+  gap: 1em;
   display: flex;
-  /*   border: 10px solid red; */
   justify-content: center;
+  
+  
 }
 
 @media (max-width: 991px) {
@@ -985,8 +1026,13 @@
 .benefit-column {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  /* padding-left: 2em; */
   line-height: normal;
-  width: 33.3%;
+  min-width: 37%;
+  max-height: 60%;
+
+  
 }
 
 @media (max-width: 991px) {
@@ -1005,7 +1051,8 @@
   flex-direction: column;
   align-items: start;
   width: 100%;
-  padding: 1em 0.3125em 2.3125em 3.1875em;
+  
+/*   padding: 1em 0.3125em 2.3125em 3.1875em; */
 }
 
 @media (max-width: 991px) {
@@ -1059,20 +1106,19 @@
   color: #1c1a4a;
   text-transform: capitalize;
   margin-top: 1.9375em;
-  font: 400 1em/1.75em Inter, sans-serif;
+  font: 400 1em/1.75em Poppins, sans-serif;
 }
 
 .benefit-card-2 {
   border-radius: 1.25em;
-  box-shadow: 0.625em 0.625em 0px 0px #d9d5f1;
-  border: 1px solid rgba(200, 193, 237, 1);
-  background-color: #edeaff;
+  box-shadow: 0.625em 0.625em 0px 0px #c9e4e9;
+  border: 1px solid rgba(201, 228, 233, 1);
+  background-color: #f1fdff;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   align-items: start;
   width: 100%;
-  padding: 1em 0.3125em 2.25em 3.1875em;
 }
 
 @media (max-width: 991px) {
@@ -1112,20 +1158,19 @@
   color: #1c1a4a;
   text-transform: capitalize;
   margin-top: 2em;
-  font: 400 1em/1.75em Inter, sans-serif;
+  font: 400 1em/1.75em Poppins, sans-serif;
 }
 
 .benefit-card-3 {
   border-radius: 1.25em;
-  box-shadow: 0.625em 0.625em 0px 0px #e5decb;
-  border: 1px solid rgba(235, 224, 196, 1);
-  background-color: #fff7e2;
+  box-shadow: 0.625em 0.625em 0px 0px #c9e4e9;
+  border: 1px solid rgba(201, 228, 233, 1);
+  background-color: #f1fdff;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   align-items: start;
   width: 100%;
-  padding: 1em 0.3125em 2.3125em 3.1875em;
 }
 
 @media (max-width: 991px) {
@@ -1155,7 +1200,7 @@
   color: #1c1a4a;
   text-transform: capitalize;
   margin-top: 2em;
-  font: 400 1em/1.75em Inter, sans-serif;
+  font: 400 1em/1.75em Poppins, sans-serif;
 }
 
 /*   ////////////////////////////////////// NEWSLETTER ////////////////////////////////// */
@@ -1251,7 +1296,7 @@
 
 .email-input {
   margin-top: -1.5em;
-  font-family: Inter, sans-serif;
+  font-family: Poppins, sans-serif;
   border: 1px solid rgba(67, 62, 194, 1);
   border-radius: 50px;
   background-color: #4a44d1;
