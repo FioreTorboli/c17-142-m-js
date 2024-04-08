@@ -431,6 +431,7 @@
 }
 
 .image-background img {
+  margin-top: -14em;
   z-index: 2;
   width: 110%;
 }
