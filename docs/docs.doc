@@ -1,0 +1,81 @@
+1. creo la carpeta docs y el archivo docs.doc para llevar la documentación del proyecto
+
+2. instalo lo necesario para el proyecto node, express, supabase, dotenv
+
+NODE
+
+para instalar node = https://nodejs.org/en/download/
+para verificar la version = Node --version
+
+Node.js es un entorno de ejecución de JavaScript basado en el motor V8 de
+Google Chrome. Permite a los desarrolladores ejecutar código JavaScript en
+el lado del servidor, lo que lo convierte en una herramienta poderosa para
+construir aplicaciones web y servidores escalables. Node.js utiliza un modelo
+de E/S sin bloqueo y orientado a eventos que lo hace eficiente y adecuado para
+aplicaciones en tiempo real. Además, cuenta con un amplio ecosistema de módulos
+y paquetes que facilitan el desarrollo de aplicaciones complejas. Node.js es
+ampliamente utilizado en el desarrollo web, aplicaciones de red, APIs, microservicios
+y más, siendo una tecnología versátil y popular en la comunidad de desarrollo de software.
+
+EXPRESS
+
+npm install express
+
+Express.js es un framework de backend popular y ampliamente utilizado para Node.js.
+Es una capa fina de funcionalidades básicas que abstrae las funciones innecesarias
+o no deseadas de la aplicación web, y está diseñado para construir aplicaciones web
+de una sola página, multipágina e híbridas. También es la base del stack MEVN, que
+incluye MongoDB, Express.js, Vue.js y Node.js. Express.js proporciona herramientas y
+características robustas para desarrollar aplicaciones de backend escalables, y es
+compatible con el motor V8 de Google, lo que proporciona un gran impulso de rendimiento
+y escalabilidad a las aplicaciones backend. Además, Express.js tiene un gran apoyo de la
+comunidad y ofrece una amplia gama de módulos y paquetes para su uso.
+
+SUPABASE
+
+npm install @supabase/supabase-js
+
+Supabase es una plataforma de código abierto que combina una base de datos PostgreSQL
+con una interfaz de API RESTful y en tiempo real. Ofrece una alternativa a Firebase, 
+permitiendo a los desarrolladores construir aplicaciones web y móviles con una base de 
+datos escalable y segura. Supabase facilita la creación de aplicaciones en tiempo real, 
+autenticación de usuarios, almacenamiento de archivos y más, todo ello utilizando PostgreSQL 
+como base de datos subyacente. Además, al ser de código abierto, los desarrolladores tienen 
+la libertad de personalizar y extender la funcionalidad de Supabase según sus necesidades específicas.
+
+DOTENV
+
+npm install dotenv --save
+
+La biblioteca dotenv te permite cargar variables de entorno desde un
+archivo .env en tu aplicación Node.js. Puedes usar la función require('dotenv').config()
+para cargar el archivo .env y hacer que las variables de entorno estén
+disponibles en el objeto process.env.
+
+creo archivos .env y .gitignore
+
+Archivo .env: 
+
+El archivo .env se utiliza para almacenar variables de entorno sensibles 
+o configuraciones específicas de un proyecto. Estas variables suelen incluir información 
+como claves de API, contraseñas de bases de datos u otras configuraciones sensibles. Al 
+utilizar un archivo .env, se separan estas variables del código fuente, lo que mejora la 
+seguridad y facilita la configuración en diferentes entornos de desarrollo.
+
+Archivo .gitignore: 
+
+El archivo .gitignore se utiliza para especificar archivos y directorios 
+que Git debe ignorar al realizar seguimiento de cambios en un repositorio. Esto es útil para 
+evitar que archivos sensibles, temporales o generados automáticamente se incluyan accidentalmente 
+en el control de versiones. Al definir qué archivos y directorios ignorar en el archivo .gitignore, 
+se mantiene limpio el repositorio y se evitan problemas de seguridad y confusión al compartir 
+el código con otros colaboradores.
+
+Agrego archivos server.js, supabaseClient.js (configuracion) y las claves de supabase a .env y documento 
+
+Para correr el servidor ejecuto el comando 
+
+node server.js
+
+servidor corriendo sin problemas en el http://localhost:3000 y levanta la página principal
+
