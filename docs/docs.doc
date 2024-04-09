@@ -70,3 +70,12 @@ evitar que archivos sensibles, temporales o generados automáticamente se incluy
 en el control de versiones. Al definir qué archivos y directorios ignorar en el archivo .gitignore, 
 se mantiene limpio el repositorio y se evitan problemas de seguridad y confusión al compartir 
 el código con otros colaboradores.
+
+Agrego archivos server.js, supabaseClient.js (configuracion) y las claves de supabase a .env y documento 
+
+Para correr el servidor ejecuto el comando 
+
+node server.js
+
+servidor corriendo sin problemas en el http://localhost:3000 y levanta la página principal
+
