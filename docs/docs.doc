@@ -3,6 +3,7 @@
 2. instalo lo necesario para el proyecto node, expres, supabase, dotenv
 
 NODE
+
 para instalar node = https://nodejs.org/en/download/
 para verificar la version = Node --version
 
@@ -50,3 +51,22 @@ La biblioteca dotenv te permite cargar variables de entorno desde un
 archivo .env en tu aplicación Node.js. Puedes usar la función require('dotenv').config()
 para cargar el archivo .env y hacer que las variables de entorno estén
 disponibles en el objeto process.env.
+
+creo archivos .env y .gitignore
+
+Archivo .env: 
+
+El archivo .env se utiliza para almacenar variables de entorno sensibles 
+o configuraciones específicas de un proyecto. Estas variables suelen incluir información 
+como claves de API, contraseñas de bases de datos u otras configuraciones sensibles. Al 
+utilizar un archivo .env, se separan estas variables del código fuente, lo que mejora la 
+seguridad y facilita la configuración en diferentes entornos de desarrollo.
+
+Archivo .gitignore: 
+
+El archivo .gitignore se utiliza para especificar archivos y directorios 
+que Git debe ignorar al realizar seguimiento de cambios en un repositorio. Esto es útil para 
+evitar que archivos sensibles, temporales o generados automáticamente se incluyan accidentalmente 
+en el control de versiones. Al definir qué archivos y directorios ignorar en el archivo .gitignore, 
+se mantiene limpio el repositorio y se evitan problemas de seguridad y confusión al compartir 
+el código con otros colaboradores.
