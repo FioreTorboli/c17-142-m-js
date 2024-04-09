@@ -5,11 +5,15 @@
 }
 
 /*   ////////////////////////////////////// CONTENEDOR DE TODO ////////////////////////////////// */
-
-.containerGral { /* EQUIVALE A BODY */
-  max-width: 95%;
+/* EQUIVALE A BODY *  modifique esto por que generaba conflicto con los margenes generales "Javier"/
+/*
+.containerGral { 
+  max-width: 95%;  
   margin: 0 auto;
 }
+
+*/
+
 
 /*   ////////////////////////////////////// HEADER ////////////////////////////////// */
 
