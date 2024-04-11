@@ -5,15 +5,11 @@
 }
 
 /*   ////////////////////////////////////// CONTENEDOR DE TODO ////////////////////////////////// */
-/* EQUIVALE A BODY *  modifique esto por que generaba conflicto con los margenes generales "Javier"/
-/*
-.containerGral { 
-  max-width: 95%;  
+
+.containerGral { /* EQUIVALE A BODY */
+  max-width: 95%;
   margin: 0 auto;
 }
-
-*/
-
 
 /*   ////////////////////////////////////// HEADER ////////////////////////////////// */
 
@@ -609,10 +605,11 @@
   white-space: nowrap;
   font-family: Poppins, sans-serif;
   font-weight: 600;
-  padding: 1.1em 2em;
+  padding: 0.6em 2em;
   cursor: pointer;
   width: 25%;
-  margin-right: 3em;
+  margin-right: 1em;
+  text-align: center;
 }
 
 @media (max-width: 991px) {
@@ -1587,3 +1584,41 @@
 .social-buttons-list li a:hover:nth-child(3) {
   color: #c32aa3;
 } */
+
+
+/* ///////////////////////////////// FILTRO PAGINA PRINCIPAL ///////////////////////////////////////// */
+
+.ocultar{
+  display: none;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+.carreras{
+  position: absolute;
+  top: 84%;
+  background-color: #009ec1;
+  width: auto;
+} 
+.universidades{
+  position: absolute;
+  top: 11em;
+  left: 38%;
+  background-color: #009ec1;
+} 
+
+.carreras td {
+  padding: 0.6em;
+}
+.universidades td {
+  padding: 0.6em;
+}
+td a:hover {
+  /* color: black; */
+  border-radius: 1em;
+  border-bottom: 0.10em solid rgb(0, 0, 0);
+}

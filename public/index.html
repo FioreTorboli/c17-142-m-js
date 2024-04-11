@@ -88,10 +88,35 @@
       <form class="search-form">
         <input type="text" class="search-input" placeholder="Busca por carrera"
           aria-label="Busca por carrera">
-        <input type="text" class="search-category" placeholder="Busca por universidad" aria-label="Busca por universidad">
-<!--         <input type="text" class="search-specialty" placeholder="Especialidad" aria-label="Especialidad"> -->
-        <button type="submit" class="search-button">Buscar</button>
-      </form>
+          
+          <input type="text" class="search-category" placeholder="Busca por universidad" aria-label="Busca por universidad">
+<!--           <button type="submit" class="search-button">Buscar</button>  -->
+          <a href="buscacarrera.html" class="search-button">
+            Buscar
+          </a>
+        </form>
+        
+
+
+ <table class="carreras">
+  <thead>
+    <th></th>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<table class="universidades">
+  <thead>
+    <th></th>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+
+
+
     </section>
 
     <!-- ////////////////////////////////////// CARRERAS MAS BUSCADAS //////////////////////////////////  -->
@@ -369,5 +394,23 @@
 
   </div>
 
+
+  <!-- //////////////////////////////////////////////// JAVASCRIPT ///////////////////////////////////////////////////////// -->
+
+  <input type="text" id="buscar" placeholder="Buscar Carrera">
+      <table>
+        <thead>
+          <th></th>
+        </thead>
+        <tbody class="datos">
+
+        </tbody>
+      </table>
+
+
+
+
+    <script src="js/script.js"></script>
+  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 </body>
 </html>
