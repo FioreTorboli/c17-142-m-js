@@ -1622,3 +1622,139 @@ td a:hover {
   border-radius: 1em;
   border-bottom: 0.10em solid rgb(0, 0, 0);
 }
+
+
+/*   ////////////////////////////////////// DETALLE DE CARRERA ////////////////////////////////// */
+
+
+.container-career-details{
+  background: radial-gradient(100% 83.52% at 100% 88.77%, #F2F2F2 0%, #C9C9C9 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  min-height: 50em;
+  max-width: 100%;
+  gap: 19px;
+  padding: 1em 4em;
+}
+
+.first-block{
+  margin-top: 24px;
+  /* margin-left: 72px; */
+  gap: 0px;
+  opacity: 0px;
+}
+
+.second-block{
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+#profile-graduate{
+  padding-top:18px;
+}
+
+.career-name {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 54px;
+  text-decoration: underline;
+  text-align: right;
+  width: 886px;
+  height: 54px;
+  top: 133px;
+  gap: 0px;
+  opacity: 0px;
+  color: #374493;
+}
+
+.subtittles-details{
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+  color: #374493;
+  padding-inline-end: 4px;
+}
+
+.container-subjects{
+  width: Fixed (1,308px)px;
+  height: Hug (178px)px;
+  margin: 24px 0px 0px 0px;
+  padding-top:22px;
+  padding-bottom: 44px;
+  gap: 0px;
+  opacity: 0px;
+  background: #F6F6F6;
+  border-radius: 10px;
+  box-shadow: 4px 6px 4px 0px #00000080;
+}
+
+.peers{
+  display:flex;
+  flex-direction: row;
+}
+
+.more-description{
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+}
+
+.content-by-year{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.years{
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  color: #374493;
+  padding-bottom: 16px;
+}
+
+.content-by-year{
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+}
+
+.intermediate-tittle {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 54px;
+  margin-top: 18px;
+  text-decoration: underline;
+  text-align: left;
+  width: 886px;
+  height: 54px;
+  color: #374493;
+}
+
+.go-back-button{
+  position:absolute;
+  z-index: 1;
+  margin-top: 30px;
+  margin-left: 10px;
+  width: 128px;
+  height: 25px;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+  color: #374493;
+  text-decoration: none;
+}
