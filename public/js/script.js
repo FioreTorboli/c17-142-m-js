@@ -1,4 +1,6 @@
-/////////////////////////////////////////////////BUSCADOR - LANDING//////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const inputCarrera = document.querySelector(".search-input");
 const inputUniversidad = document.querySelector(".search-category");
 
@@ -9,45 +11,25 @@ const tablaUniversidades = document.querySelector(".universidades");
 const celdasUniversidades = tablaUniversidades.getElementsByTagName("td"); 
 
 
-// CARRERAS 
-let uni = `js/data.json`;
 
-fetch(uni)
+// CARRERAS 
+let uri = `js/data.json`;
+
+fetch(uri)
   .then(response => response.json())
   .then(json => mostrarCarreras(json))
 
   .catch(error => console.log(error));
 
-  function mostrarCarreras(data) {
-    let body = "";
-    data.carreras.forEach(carrera => {
-      body += `<tr><td class="ocultar"><a href="#">${carrera.nombre}</a></td></tr>`;
-      document.querySelector(".carreras").innerHTML = body;
-    });
-  
-    const carrerasClick = document.querySelectorAll(".carreras a");
-    carrerasClick.forEach(click => {
-      click.addEventListener('click', (event) => {
-        event.preventDefault();
-        const carreraSeleccionada = event.target.innerText;
-        inputCarrera.value = carreraSeleccionada;
-
-        carrerasClick.forEach(otherClick => {
-          if (otherClick !== click) {
-            otherClick.parentElement.classList.add("ocultar");
-            click.parentElement.classList.add("ocultar");
-          }
-        });
-        
-
-
-      });
-    });
-  }
+function mostrarCarreras(data) {  
+  let body = "";
+  data.carreras.forEach(carrera => {
+    body+=`<tr><td class="ocultar">${carrera.nombre}</td></tr>`;
+    document.querySelector(".carreras").innerHTML = body;
+    }
+)};
 
 inputCarrera.addEventListener('keyup', (event) => {
-
-  
   let ingresarTexto = event.target.value;
 
   let expresionRegular = new RegExp(ingresarTexto, "i")
@@ -57,6 +39,7 @@ inputCarrera.addEventListener('keyup', (event) => {
     if (expresionRegular.test(valor.innerText) && (ingresarTexto!="")) {
       valor.classList.remove("ocultar")
     } else {
+      console.log(valor);
       valor.classList.add("ocultar");
     }
   }
@@ -66,6 +49,7 @@ inputCarrera.addEventListener('keyup', (event) => {
 
 // UNIVERSIDADES
 
+ let uni = `js/data.json`;
 
   fetch(uni)
   .then(response => response.json())
@@ -77,31 +61,10 @@ inputCarrera.addEventListener('keyup', (event) => {
 function mostrarUniversidades(datos) {  
   let body = "";
   datos.universidades.forEach(universidad => {
-    body+=`<tr><td class="ocultar"><a href="#">${universidad.nombre}</a> </td></tr>`;
+    body+=`<tr><td class="ocultar">${universidad.nombre}</td></tr>`;
     document.querySelector(".universidades").innerHTML = body;
-    })
-
-    const universidadesClick = document.querySelectorAll(".universidades a");
-    universidadesClick.forEach(click => {
-      click.addEventListener('click', (event) => {
-        event.preventDefault();
-        const universidadSeleccionada = event.target.innerText;
-        inputUniversidad.value = universidadSeleccionada;
-
-
-        universidadesClick.forEach(otherClick => {
-          if (otherClick !== click) {
-            otherClick.parentElement.classList.add("ocultar");
-            click.parentElement.classList.add("ocultar");
-          }
-        });
-  });
-});
-
-
-
-
-};
+    }
+)};
 
 
 inputUniversidad.addEventListener('keyup', (event) => {
@@ -115,8 +78,10 @@ inputUniversidad.addEventListener('keyup', (event) => {
     if (expresionRegular.test(valor.innerText) && (ingresarTexto!="")) {
       valor.classList.remove("ocultar")
     } else {
+      console.log(valor);
       valor.classList.add("ocultar");
     }
   }
 
 })
+
