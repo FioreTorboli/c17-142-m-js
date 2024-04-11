@@ -1,0 +1,171 @@
+{
+    "carreras": [
+      {
+        "id": 1,
+        "nombre": "Programación",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 2,
+        "nombre": "Arquitectura",
+        "url": "buscacarrera.html"
+        
+      },
+      {
+        "id": 3,
+        "nombre": "Ingeniería Civil",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 4,
+        "nombre": "Medicina",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 5,
+        "nombre": "Derecho",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 6,
+        "nombre": "Administración de Empresas",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 7,
+        "nombre": "Psicología",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 8,
+        "nombre": "Contabilidad",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 9,
+        "nombre": "Marketing",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 10,
+        "nombre": "Ingeniería Industrial",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 11,
+        "nombre": "Ciencias de la Computación",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 12,
+        "nombre": "Comunicación Social",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 13,
+        "nombre": "Economía",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 14,
+        "nombre": "Biología",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 15,
+        "nombre": "Química",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 16,
+        "nombre": "Matemáticas",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 17,
+        "nombre": "Diseño Gráfico",
+        "url": "buscacarrera.html"
+      },
+      {
+        "id": 18,
+        "nombre": "Turismo",
+        "url": "buscacarrera.html"
+      }
+    ],
+    
+    "universidades": [
+      { 
+        "id": 1, 
+        "nombre": "Universidad Nacional De San Luis"
+      },
+      { 
+        "id": 2, 
+        "nombre": "Universidad Siglo 21"
+      },
+      { 
+        "id": 3, 
+        "nombre": "Universidad Católica de Cuyo - Sede San Luis"
+      },
+      { 
+        "id": 4, 
+        "nombre": "Universidad de La Punta"
+      },
+      { 
+        "id": 5, 
+        "nombre": "Universidad Provincial de Oficios \"Eva Perón\""
+      },
+      { 
+        "id": 6, 
+        "nombre": "Universidad Nacional de Villa Mercedes"
+      },
+      { 
+        "id": 7, 
+        "nombre": "Universidad Nacional de San Luis - Villa Mercedes"
+      },
+      { 
+        "id": 8, 
+        "nombre": "Universidad Provincial de Oficios \"Santiago del Estero\""
+      },
+      { 
+        "id": 9, 
+        "nombre": "Universidad Nacional de San Luis - Villa de la Quebrada"
+      },
+      { 
+        "id": 10, 
+        "nombre": "Universidad Nacional de San Luis - Villa Reynolds"
+      },
+      { 
+        "id": 11, 
+        "nombre": "Universidad Provincial de Oficios \"Juan Domingo Perón\""
+      },
+      { 
+        "id": 12, 
+        "nombre": "Instituto Nacional de Educación Tecnológica (INET) - Sede San Luis"
+      },
+      { 
+        "id": 13, 
+        "nombre": "Instituto Superior de Educación Técnica N° 2 - Sede Villa Mercedes"
+      },
+      { 
+        "id": 14, 
+        "nombre": "Instituto Superior de Seguridad Pública"
+      },
+      { 
+        "id": 15, 
+        "nombre": "Escuela de Música y Danza Nº 1 \"Juan Crisóstomo Lafinur\""
+      },
+      { 
+        "id": 16, 
+        "nombre": "Instituto Universitario de Seguridad Pública"
+      },
+      { 
+        "id": 17, 
+        "nombre": "Escuela de Gobierno y Política Pública"
+      },
+      { 
+        "id": 18, 
+        "nombre": "Centro Educativo Nº 1 \"Francisco Narciso Laprida\""
+      }
+    ]
+  }
+  
