@@ -1,4 +1,69 @@
+/* Esto agrega bootstrap (usado cuando menos para obtener los íconos de las redes sociales) en todas las páginas. */
 
+const head = document.querySelector("head");
+head.innerHTML += '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">';
+
+/* HEADER y FOOTER reutilizables por todas las páginas. */
+
+const header = document.querySelector("header");
+const footer = document.querySelector("footer");
+
+header.innerHTML = `
+<div class="site-name">
+  <img src="img/logogenerico.png" alt="Logo" class="logo" />
+  <h1 class="site-title">BUSCO UNI</h1>
+</div>
+<nav class="nav-container">
+  <ul class="nav-list">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Sobre Nosotros</a></li>
+    <li><a href="detalle_carrera.html">Buscar Uni</a></li>
+    <li><a href="#">Comparador</a></li>
+    <li><a href="#">Test Vocacional</a></li>
+  </ul>
+</nav>
+`;
+
+footer.innerHTML = `
+<h2 class="footer-title">Busco UNI</h2>
+<address class="footer-address">
+  Calle Falsa 123, San Luis, Argentina.
+</address>
+<nav class="footer-links">
+  Políticas de Privacidad | Términos y Condiciones
+</nav>
+<div class="social-buttons">
+  <ul class="social-buttons-list">
+    <li>
+      <a class="facebook" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <i class="bi bi-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter-x" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <i class="bi bi-twitter-x"></i>
+      </a>
+    </li>
+    <li>
+      <a class="instagram" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <i class="bi bi-instagram"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
 
 /////////////////////////////////////////////////BUSCADOR - LANDING//////////////////////////////////////////////////////////////
 const inputCarrera = document.querySelector(".search-input");
