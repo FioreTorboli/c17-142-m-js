@@ -13,7 +13,7 @@
 
 /*   ////////////////////////////////////// HEADER ////////////////////////////////// */
 
-.header {
+header {
   /* align-items: start; ¿flex-start? */
   justify-content: space-between;
   border-bottom: 0.0625em solid rgba(128, 128, 128, 1);
@@ -23,7 +23,7 @@
   font-family: Poppins, sans-serif;
   font-size: 1em; /* Parece no incidir en nada. */
   font-weight: 600;
-  padding: 0.5em 5em;
+  padding: 0.5em 1em;
   align-items: center;
 }
 
@@ -1376,7 +1376,7 @@
 
 /*   ////////////////////////////////////// FOOTER ////////////////////////////////// */
 
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1431,14 +1431,15 @@
   }
 }
 
-.footer-logo {
+/* NO HAY NADA QUE USE ESTA CLASE - BORRABLE */
+/* .footer-logo {
   width: 205px;
   max-width: 100%;
   margin-top: 1em;
   aspect-ratio: 5;
   object-fit: auto;
   object-position: center;
-}
+} */
 
 /* REDES SOCIALES */
 
@@ -1447,6 +1448,7 @@
   width: 30%;
   padding: 3%;
   /* background-color: #ebebeb; */
+  background-color: #a2aadd;
   position: relative;
   border-radius: 15px;
 }
@@ -1561,12 +1563,12 @@
   background: #3b5998;
 }
 
-.twitter:hover {
-  color: #1da1f2;
+.twitter-x:hover {
+  color: black;
 }
 
-.twitter:hover span {
-  background: #1da1f2;
+.twitter-x:hover span {
+  background: black;
 }
 
 .instagram:hover {
@@ -1575,6 +1577,11 @@
 
 .instagram:hover span {
   background: #c32aa3;
+}
+
+.bi-facebook, .bi-twitter-x, .bi-instagram {
+  font-size: 0.95em;
+  /* color: cornflowerblue; */
 }
 
 /* .social-buttons-list li a .twitter {
