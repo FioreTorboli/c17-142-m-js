@@ -706,9 +706,15 @@ header {
   
 }
 
+/* anidamiento de selectores */
 .carreras-filter-item--active {
   background-color: #F6F6F6;
-  color: #374493;
+  & a { color: #374493; }
+} 
+
+.carreras-filter-item--inactive {
+  background-color: #374493;
+  & a { color: #F6F6F6; }
 }
 
 @media (max-width: 991px) {
