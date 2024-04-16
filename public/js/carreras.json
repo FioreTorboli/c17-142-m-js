@@ -1,0 +1,130 @@
+﻿[
+    {
+        "ruta-img": "programacioncompleta1.png",
+        "nombre": "Curso de Desarrollo Web -UNSL-",
+        "materias": "2",
+        "semanas": "4",
+        "precio": "59",
+        "score": "4.8"
+    },
+    {
+        "ruta-img": "programacion1.png",
+        "nombre": "Curso de JavaScript -UNSL-",
+        "materias": "4",
+        "semanas": "16",
+        "precio": "89",
+        "score": "4.8"
+    },
+    {
+        "ruta-img": "programacion1.png",
+        "nombre": "Tec. en programación -UNSL-",
+        "materias": "20",
+        "semanas": "100",
+        "precio": "259",
+        "score": "4.6"
+    },
+    {
+        "ruta-img": "programacion1.png",
+        "nombre": "Tec. en Desarrollador de Software -UNSL-",
+        "materias": "34",
+        "semanas": "150",
+        "precio": "359",
+        "score": "5.0"
+    },
+    {
+        "ruta-img": "_administracion.jpg",
+        "nombre": "Administración de empresas -UNS-",
+        "materias": "35",
+        "semanas": "200",
+        "precio": "350",
+        "score": "4.1"
+    },
+    {
+        "ruta-img": "_administracion.jpg",
+        "nombre": "Administración de empresas -UNS-",
+        "materias": "35",
+        "semanas": "200",
+        "precio": "350",
+        "score": "4.2"
+    },
+    {
+        "ruta-img": "_administracion.jpg",
+        "nombre": "Administración de empresas -UNS-",
+        "materias": "35",
+        "semanas": "200",
+        "precio": "350",
+        "score": "4.3"
+    },
+    {
+        "ruta-img": "_administracion.jpg",
+        "nombre": "Administración de empresas -UNS-",
+        "materias": "35",
+        "semanas": "200",
+        "precio": "350",
+        "score": "4.4"
+    },
+    {
+        "ruta-img": "_contabilidad.jpg",
+        "nombre": "Contador público -UNS-",
+        "materias": "37",
+        "semanas": "205",
+        "precio": "400",
+        "score": "4.2"
+    },
+    {
+        "ruta-img": "_contabilidad.jpg",
+        "nombre": "Contador público -UNS-",
+        "materias": "37",
+        "semanas": "205",
+        "precio": "400",
+        "score": "4.3"
+    },
+    {
+        "ruta-img": "_contabilidad.jpg",
+        "nombre": "Contador público -UNS-",
+        "materias": "37",
+        "semanas": "205",
+        "precio": "400",
+        "score": "4.4"
+    },
+    {
+        "ruta-img": "_contabilidad.jpg",
+        "nombre": "Contador público -UNS-",
+        "materias": "37",
+        "semanas": "205",
+        "precio": "400",
+        "score": "4.5"
+    },
+    {
+        "ruta-img": "_derecho.jpg",
+        "nombre": "Abogacía -UNS-",
+        "materias": "40",
+        "semanas": "230",
+        "precio": "500",
+        "score": "4.5"
+    },
+    {
+        "ruta-img": "_derecho.jpg",
+        "nombre": "Abogacía -UNS-",
+        "materias": "40",
+        "semanas": "230",
+        "precio": "500",
+        "score": "4.6"
+    },
+    {
+        "ruta-img": "_derecho.jpg",
+        "nombre": "Abogacía -UNS-",
+        "materias": "40",
+        "semanas": "230",
+        "precio": "500",
+        "score": "4.7"
+    },
+    {
+        "ruta-img": "_derecho.jpg",
+        "nombre": "Abogacía -UNS-",
+        "materias": "40",
+        "semanas": "230",
+        "precio": "500",
+        "score": "4.8"
+    }
+]
