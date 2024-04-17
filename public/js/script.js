@@ -127,7 +127,7 @@ header.innerHTML = `
     <li><a href="#">Inicio</a></li>
     <li><a href="#">Sobre Nosotros</a></li>
     <li><a href="detalle_carrera.html">Buscar Uni</a></li>
-    <li><a href="#">Comparador</a></li>
+    <li><a href="uniCuyo.html">Comparador</a></li>
     <li><a href="test-vocacional.html">Test Vocacional</a></li>
   </ul>
 </nav>
