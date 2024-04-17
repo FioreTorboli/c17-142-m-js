@@ -127,8 +127,8 @@ header.innerHTML = `
     <li><a href="#">Inicio</a></li>
     <li><a href="#">Sobre Nosotros</a></li>
     <li><a href="detalle_carrera.html">Buscar Uni</a></li>
-    <li><a href="uniCuyo.html">Comparador</a></li>
-    <li><a href="test-vocacional.html">Test Vocacional</a></li>
+    <li><a href="#">Comparador</a></li>
+    <li><a href="#">Test Vocacional</a></li>
   </ul>
 </nav>
 `;
@@ -175,6 +175,8 @@ footer.innerHTML = `
 `;
 
 /////////////////////////////////////////////////BUSCADOR - LANDING//////////////////////////////////////////////////////////////
+
+
 const inputCarrera = document.querySelector(".search-input");
 const inputUniversidad = document.querySelector(".search-category");
 
@@ -184,8 +186,17 @@ const celdasCarreras = tablaCarreras.getElementsByTagName("td");
 const tablaUniversidades = document.querySelector(".universidades"); 
 const celdasUniversidades = tablaUniversidades.getElementsByTagName("td"); 
 
+// LLAMADO AL BOTÓN BUSCAR 
+const btnBuscar = document.querySelector(".search-button");
+
+
+
 
 // CARRERAS 
+
+
+
+
 let uni = `js/data.json`;
 
 fetch(uni)
@@ -208,6 +219,24 @@ fetch(uni)
         const carreraSeleccionada = event.target.innerText;
         inputCarrera.value = carreraSeleccionada;
 
+
+const seleccionarCarrera = data.carreras.find(c => c.nombre === carreraSeleccionada);
+
+
+if (seleccionarCarrera) {
+
+  console.log(`Seleccionaste: ${seleccionarCarrera.nombre}`);
+
+  btnBuscar.addEventListener('click', () => {
+      // ACA DEBERIAMOS LLEVAR AL USUARIO A LA PAGINA CORRESPONDIENTE 
+    window.location.href = "buscacarrera.html";
+
+  });
+
+} else {
+  console.error("Carrera no encontrada");
+}
+
         carrerasClick.forEach(otherClick => {
           if (otherClick !== click) {
             otherClick.parentElement.classList.add("ocultar");
@@ -220,6 +249,10 @@ fetch(uni)
       });
     });
   }
+
+
+
+
 
 inputCarrera.addEventListener('keyup', (event) => {
 
@@ -240,6 +273,15 @@ inputCarrera.addEventListener('keyup', (event) => {
 })
 
 
+
+
+
+
+
+
+
+
+
 // UNIVERSIDADES
 
 
@@ -250,9 +292,9 @@ inputCarrera.addEventListener('keyup', (event) => {
 
   
 
-function mostrarUniversidades(datos) {  
+function mostrarUniversidades(data) {  
   let body = "";
-  datos.universidades.forEach(universidad => {
+  data.universidades.forEach(universidad => {
     body+=`<tr><td class="ocultar"><a href="#">${universidad.nombre}</a> </td></tr>`;
     document.querySelector(".universidades").innerHTML = body;
     })
@@ -264,6 +306,22 @@ function mostrarUniversidades(datos) {
         const universidadSeleccionada = event.target.innerText;
         inputUniversidad.value = universidadSeleccionada;
 
+
+        const seleccionarUniversidad = data.universidades.find(u => u.nombre === universidadSeleccionada);
+
+        if (seleccionarUniversidad) {
+
+          console.log(`Seleccionaste: ${seleccionarUniversidad.nombre}`);
+
+          btnBuscar.addEventListener('click', () => {
+              // ACA DEBERIAMOS LLEVAR AL USUARIO A LA PAGINA CORRESPONDIENTE 
+            window.location.href = "buscacarrera.html";
+            
+          });
+
+        } else {
+          console.error("Carrera no encontrada");
+        }
 
         universidadesClick.forEach(otherClick => {
           if (otherClick !== click) {
