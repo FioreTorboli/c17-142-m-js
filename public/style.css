@@ -1771,3 +1771,106 @@ td a:hover {
   color: #374493;
   text-decoration: none;
 }
+
+
+
+/*   //////////////////////////////////////   TEST VOCACIONAL ////////////////////////////////// */
+
+.container-first-section{
+  background-image:url("img/testvocacional.png");
+  opacity:70%;
+  position: relative;
+  width: 100%;
+  height: 486px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-first-section{
+  width: 732px;
+  height: 192px;
+  gap: 0px;
+  opacity: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color:#FFFFFF;
+  font-family: Poppins;
+}
+
+.tittle-test{
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 26px;
+  padding-bottom: 0.3em;
+}
+
+.test-description{
+  padding-bottom: 1em;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: left;
+}
+
+.button-test{
+  text-decoration: none;
+  width: 290px;
+  height: 66px;
+  top: 320px;
+  left: 719px;
+  padding: 20px 60px 20px 60px;
+  gap: 0px;
+  border-radius: 20px;
+  text-align: center;
+  opacity: 100%;
+  background: #374493;
+  font-size: 20px;
+  font-weight: 700;
+  color:#FFFFFF;
+}
+
+.container-second-section{
+  width: 100%;
+  height: 550px;
+  background-color:#D9D9D9;
+}
+
+.container-content{
+  width: 85%;
+  height: 268px;
+  margin-top: 2.5em;
+  margin-left: 7.5%;
+  padding-top: 2em;
+  gap: 0px;
+  border-radius: 10px;
+  background: #F6F6F6;
+}
+
+.bg{
+  background-color:#D9D9D9;
+}
+
+.question-test{
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  color: #374493;
+  padding-bottom: 1.5em;
+}
+
+.question-description{
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
+  color: #374493;
+  padding-bottom: 1em;
+}
