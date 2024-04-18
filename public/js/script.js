@@ -128,7 +128,7 @@ header.innerHTML = `
     <li><a href="#">Sobre Nosotros</a></li>
     <li><a href="detalle_carrera.html">Buscar Uni</a></li>
     <li><a href="#">Comparador</a></li>
-    <li><a href="#">Test Vocacional</a></li>
+    <li><a href="#">test-vocacional</a></li>
   </ul>
 </nav>
 `;
