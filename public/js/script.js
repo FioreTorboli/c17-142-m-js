@@ -1,21 +1,36 @@
 // PRUEBAS DOM PARA VER SI ME PUEDO TRAER ELEMENTOS DE BUSCACARRERA.HTML
-document.addEventListener('DOMContentLoaded', function() {
+// document.addEventListener('DOMContentLoaded', function() {
   
-  const elemento = document.querySelector('.btm');
-  if (elemento) {
+//   const elemento = document.querySelector('.btm');
+//   if (elemento) {
    
-      console.log("Elemento boton de buscacarrera encontrado:", elemento);
-  } else {
-      console.log("Elemento boton de buscacarrera no encontrado");
-  }
-  const elemento2 = document.querySelector('.search-title');
-  if (elemento2) {
+//       console.log("Elemento boton de buscacarrera encontrado:", elemento);
+//   } else {
+//       console.log("Elemento boton de buscacarrera no encontrado");
+//   }
+//   const elemento2 = document.querySelector('.search-title');
+//   if (elemento2) {
    
-      console.log("Elemento titulo de index encontrado:", elemento);
-  } else {
-      console.log("Elemento titulo de index no encontrado");
-  }
+//       console.log("Elemento titulo de index encontrado:", elemento);
+//   } else {
+//       console.log("Elemento titulo de index no encontrado");
+//   }
+// });
+
+
+//PARA PROBAR FUNCIONALIDAD BUSCADOR
+
+let botonBuscar = document.querySelector('.search-button');
+
+botonBuscar.addEventListener('click', function() {
+  let campoCarrera = document.querySelector('.search-input').value;
+  //aca se valida que no esté vacío, que sea carrera válida, etc.
+  //esta carrera es guardada para que la levante la otra página
+  sessionStorage.setItem("carrera", campoCarrera); //key, value
+  window.open("buscacarrera.html"); //abre en nueva pestaña
 });
+
+//FIN PRUEBA FUNCIONALIDAD BUSCADOR
 
 
 // PARA LA SECCION "CARRERAS MÁS BUSCADAS" DE LA PÁGINA PRINCIPAL.
