@@ -1,3 +1,23 @@
+// PRUEBAS DOM PARA VER SI ME PUEDO TRAER ELEMENTOS DE BUSCACARRERA.HTML
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const elemento = document.querySelector('.btm');
+  if (elemento) {
+   
+      console.log("Elemento boton de buscacarrera encontrado:", elemento);
+  } else {
+      console.log("Elemento boton de buscacarrera no encontrado");
+  }
+  const elemento2 = document.querySelector('.search-title');
+  if (elemento2) {
+   
+      console.log("Elemento titulo de index encontrado:", elemento);
+  } else {
+      console.log("Elemento titulo de index no encontrado");
+  }
+});
+
+
 // PARA LA SECCION "CARRERAS MÁS BUSCADAS" DE LA PÁGINA PRINCIPAL.
 
 // OBTENCIÓN DE DATOS DEL ARCHIVO LOCAL PSEUDO BBDD.
