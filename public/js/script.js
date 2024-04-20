@@ -32,115 +32,7 @@ botonBuscar.addEventListener('click', function() {
 
 //FIN PRUEBA FUNCIONALIDAD BUSCADOR
 
-
-// PARA LA SECCION "CARRERAS MÁS BUSCADAS" DE LA PÁGINA PRINCIPAL.
-
-// OBTENCIÓN DE DATOS DEL ARCHIVO LOCAL PSEUDO BBDD.
-
-let dataLocal = null;
-
-fetch('js/carreras.json')
-  .then(response => response.json())
-  .then(data => guardarData(data))
-  .catch(error => console.log(error));
-
-//Toda la info de las carreras (en el json) ahora en el objeto data.
-function guardarData(data) {
-  dataLocal = data;
-}
-
-// IDENTIFICACIÓN DEL SECTOR DE LA PÁGINA QUE CONTIENE LAS CARRERAS.
-const carrerasActuales = document.querySelector(".carreras-list");
-
-// AL CLIQUEAR SOBRE UNA RAMA DE ESTUDIO, SE CAMBIAN ESTILOS Y MUESTRAN LAS CARRERAS CORRESPONDIENTES.
-
-// ADMINISTRACIÓN.
-const linkAdm = document.querySelector("#administracion");
-linkAdm.addEventListener("click", (event) => {
-  ajustarEstilosBotones(linkAdm);
-  mostrarCarrerasSegunClave(dataLocal, "administra"); //Mandamos la fuente de datos y la palabra clave.
-});
-
-// PROGRAMACION
-const linkProg = document.querySelector("#programacion");
-linkProg.addEventListener("click", (event) => {
-  ajustarEstilosBotones(linkProg);
-  mostrarCarrerasSegunClave(dataLocal, "unsl"); //Mandamos la fuente de datos y la palabra clave.
-  //MEJORAR LA CLAVE ACA!!!!!!!!!!!!!!!!!!
-});
-
-// CONTABILIDAD
-const linkConta = document.querySelector("#contabilidad");
-linkConta.addEventListener("click", (event) => {
-  ajustarEstilosBotones(linkConta);
-  mostrarCarrerasSegunClave(dataLocal, "conta"); //Mandamos la fuente de datos y la palabra clave.
-});
-
-// DERECHO
-const linkDer = document.querySelector("#derecho");
-linkDer.addEventListener("click", (event) => {
-  ajustarEstilosBotones(linkDer);
-  mostrarCarrerasSegunClave(dataLocal, "aboga"); //Mandamos la fuente de datos y la palabra clave.
-});
-
-//Pone estilos de ACTIVO a elementoBuscado y de INACTIVO a sus hermanos.
-function ajustarEstilosBotones(elementoBuscado) {
-  const hermanos = document.querySelectorAll(".carreras-filter-group > .carreras-filter-item");
-  hermanos.forEach(hermano => {
-    if (hermano !== elementoBuscado){
-      hermano.classList.add("carreras-filter-item--inactive");
-    }
-    else {
-      //IMPORTANTE remover estilo previo antes de agregar nuevo, sino no funciona.
-      elementoBuscado.classList.remove("carreras-filter-item--inactive");
-      elementoBuscado.classList.add("carreras-filter-item--active");
-    }
-  });
-}
-
-// FUNCIÓN QUE MUESTRA LAS CARRERAS QUE COINCIDAN CON LA PALABRA CLAVE.
-function mostrarCarrerasSegunClave(carreras, carreraBuscada) {
-  let arregloCarreras = []; //Arreglo que contendrá solo las carreras de mi interés.
-  carreras.forEach(carrera => {
-    if (carrera.nombre.toLowerCase().includes(carreraBuscada)) {
-      arregloCarreras.push( Object.values(carrera) ); //Al guardar cada carrera se guarda como un array.
-    }
-  });
-  //En este punto arregloCarreras es un arreglo de arreglos, donde cada arreglo interno es una carrera de una rama específica que coincide con el criterio carreraBuscada (administración, derecho, etc.).
-
-  carrerasActuales.innerHTML = ""; //Limpio el contenedor de carreras.
-
-  //Muestro los 4 primeros elementos del arregloAdmin, si los hay.
-  let i = 0;
-  while (i < arregloCarreras.length && i < 4) {
-    carrerasActuales.innerHTML += `
-    <div class="carrera-card">
-      <img src="img/${arregloCarreras[i][0]}" alt="${arregloCarreras[i][1]}" class="carrera-card-image"
-        loading="lazy" />
-      <div class="carrera-card-content">
-        <h3 class="carrera-card-title">${arregloCarreras[i][1]}</h3>
-        <div class="carrera-card-details">
-          <div class="carrera-card-detail">
-            <img src="img/agenda.png" alt="" class="carrera-card-detail-icon" loading="lazy" />
-            <span class="carrera-card-detail-text">${arregloCarreras[i][2]} Materias</span>
-          </div>
-          <div class="carrera-card-detail">
-            <img src="img/reloj.png" alt="" class="carrera-card-detail-icon" loading="lazy" />
-            <span class="carrera-card-detail-text">${arregloCarreras[i][3]} Semanas</span>
-          </div>
-        </div>
-        <div class="carrera-card-footer">
-          <span class="carrera-card-price">A partir de: ${arregloCarreras[i][4]}</span>
-          <div class="carrera-card-rating">
-            <img src="img/estrella.png" alt="" class="carrera-card-rating-icon" loading="lazy" />
-            <span class="carrera-card-rating-text">${arregloCarreras[i][5]}</span>
-          </div>
-        </div>
-      </div>
-    </div>`;
-    i++;
-  }
-}
+//**************************************************************************************
 
 /* Esto agrega bootstrap (usado cuando menos para obtener los íconos de las redes sociales) en todas las páginas. */
 
@@ -160,10 +52,10 @@ header.innerHTML = `
 <nav class="nav-container">
   <ul class="nav-list">
     <li><a href="#">Inicio</a></li>
-    <li><a href="uniCuyo.html">Sobre Nosotros</a></li>
-    <li><a href="detalle_carrera.html">Buscar Uni</a></li>
+    <li><a href="uniCuyo.html">Sobre nosotros</a></li>
+    <li><a href="detalle_carrera.html">Buscar uni</a></li>
     <li><a href="#">Comparador</a></li>
-    <li><a href="test-vocacional.html">Test Vocacional</a></li>
+    <li><a href="test-vocacional.html">Test vocacional</a></li>
   </ul>
 </nav>
 `;
@@ -174,7 +66,7 @@ footer.innerHTML = `
   Calle Falsa 123, San Luis, Argentina.
 </address>
 <nav class="footer-links">
-  Políticas de Privacidad | Términos y Condiciones
+  Políticas de privacidad | Términos y condiciones
 </nav>
 <div class="social-buttons">
   <ul class="social-buttons-list">
@@ -307,16 +199,6 @@ inputCarrera.addEventListener('keyup', (event) => {
 
 })
 
-
-
-
-
-
-
-
-
-
-
 // UNIVERSIDADES
 
 
@@ -324,8 +206,6 @@ inputCarrera.addEventListener('keyup', (event) => {
   .then(response => response.json())
   .then(json => mostrarUniversidades(json))
   .catch(error => console.log(error));  
-
-  
 
 function mostrarUniversidades(data) {  
   let body = "";
@@ -390,4 +270,113 @@ inputUniversidad.addEventListener('keyup', (event) => {
 
 })
 
+//-----------------------------------------------------------------------------------
 
+// PARA LA SECCION "CARRERAS MÁS BUSCADAS" DE LA PÁGINA PRINCIPAL.
+
+// OBTENCIÓN DE DATOS DEL ARCHIVO LOCAL PSEUDO BBDD.
+
+let dataLocal = null;
+
+fetch('js/carreras.json')
+  .then(response => response.json())
+  .then(data => guardarData(data))
+  .catch(error => console.log(error));
+
+//Toda la info de las carreras (en el json) ahora en el objeto data.
+function guardarData(data) {
+  dataLocal = data;
+}
+
+// IDENTIFICACIÓN DEL SECTOR DE LA PÁGINA QUE CONTIENE LAS CARRERAS.
+const carrerasActuales = document.querySelector(".carreras-list");
+
+// AL CLIQUEAR SOBRE UNA RAMA DE ESTUDIO, SE CAMBIAN ESTILOS Y MUESTRAN LAS CARRERAS CORRESPONDIENTES.
+
+// ADMINISTRACIÓN.
+const linkAdm = document.querySelector("#administracion");
+linkAdm.addEventListener("click", (event) => {
+  ajustarEstilosBotones(linkAdm);
+  mostrarCarrerasSegunClave(dataLocal, "administra"); //Mandamos la fuente de datos y la palabra clave.
+});
+
+// PROGRAMACION
+const linkProg = document.querySelector("#programacion");
+linkProg.addEventListener("click", (event) => {
+  ajustarEstilosBotones(linkProg);
+  mostrarCarrerasSegunClave(dataLocal, "unsl"); //Mandamos la fuente de datos y la palabra clave.
+  //MEJORAR LA CLAVE ACA!!!!!!!!!!!!!!!!!!
+});
+
+// CONTABILIDAD
+const linkConta = document.querySelector("#contabilidad");
+linkConta.addEventListener("click", (event) => {
+  ajustarEstilosBotones(linkConta);
+  mostrarCarrerasSegunClave(dataLocal, "conta"); //Mandamos la fuente de datos y la palabra clave.
+});
+
+// DERECHO
+const linkDer = document.querySelector("#derecho");
+linkDer.addEventListener("click", (event) => {
+  ajustarEstilosBotones(linkDer);
+  mostrarCarrerasSegunClave(dataLocal, "aboga"); //Mandamos la fuente de datos y la palabra clave.
+});
+
+//Pone estilos de ACTIVO a elementoBuscado y de INACTIVO a sus hermanos.
+function ajustarEstilosBotones(elementoBuscado) {
+  const hermanos = document.querySelectorAll(".carreras-filter-group > .carreras-filter-item");
+  hermanos.forEach(hermano => {
+    if (hermano !== elementoBuscado){
+      hermano.classList.add("carreras-filter-item--inactive");
+    }
+    else {
+      //IMPORTANTE remover estilo previo antes de agregar nuevo, sino no funciona.
+      elementoBuscado.classList.remove("carreras-filter-item--inactive");
+      elementoBuscado.classList.add("carreras-filter-item--active");
+    }
+  });
+}
+
+// FUNCIÓN QUE MUESTRA LAS CARRERAS QUE COINCIDAN CON LA PALABRA CLAVE.
+function mostrarCarrerasSegunClave(carreras, carreraBuscada) {
+  let arregloCarreras = []; //Arreglo que contendrá solo las carreras de mi interés.
+  carreras.forEach(carrera => {
+    if (carrera.nombre.toLowerCase().includes(carreraBuscada)) {
+      arregloCarreras.push( Object.values(carrera) ); //Al guardar cada carrera se guarda como un array.
+    }
+  });
+  //En este punto arregloCarreras es un arreglo de arreglos, donde cada arreglo interno es una carrera de una rama específica que coincide con el criterio carreraBuscada (administración, derecho, etc.).
+
+  carrerasActuales.innerHTML = ""; //Limpio el contenedor de carreras.
+
+  //Muestro los 4 primeros elementos del arregloAdmin, si los hay.
+  let i = 0;
+  while (i < arregloCarreras.length && i < 4) {
+    carrerasActuales.innerHTML += `
+    <div class="carrera-card">
+      <img src="img/${arregloCarreras[i][0]}" alt="${arregloCarreras[i][1]}" class="carrera-card-image"
+        loading="lazy" />
+      <div class="carrera-card-content">
+        <h3 class="carrera-card-title">${arregloCarreras[i][1]}</h3>
+        <div class="carrera-card-details">
+          <div class="carrera-card-detail">
+            <img src="img/agenda.png" alt="" class="carrera-card-detail-icon" loading="lazy" />
+            <span class="carrera-card-detail-text">${arregloCarreras[i][2]} Materias</span>
+          </div>
+          <div class="carrera-card-detail">
+            <img src="img/reloj.png" alt="" class="carrera-card-detail-icon" loading="lazy" />
+            <span class="carrera-card-detail-text">${arregloCarreras[i][3]} Semanas</span>
+          </div>
+        </div>
+        <div class="carrera-card-footer">
+          <span class="carrera-card-price">A partir de: ${arregloCarreras[i][4]}</span>
+          <div class="carrera-card-rating">
+            <img src="img/estrella.png" alt="" class="carrera-card-rating-icon" loading="lazy" />
+            <span class="carrera-card-rating-text">${arregloCarreras[i][5]}</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+    i++;
+  }
+}
