@@ -24,9 +24,11 @@ let botonBuscar = document.querySelector('.search-button');
 
 botonBuscar.addEventListener('click', function() {
   let campoCarrera = document.querySelector('.search-input').value;
+/*   let carreraUno = document.querySelector('.title-card') */
   //aca se valida que no esté vacío, que sea carrera válida, etc.
   //esta carrera es guardada para que la levante la otra página
   sessionStorage.setItem("carrera", campoCarrera); //key, value
+  /* sessionStorage.setItem("carreraUno", carreraUno); //key, value */
   window.open("buscacarrera.html"); //abre en nueva pestaña
 });
 
@@ -51,7 +53,7 @@ header.innerHTML = `
 </div>
 <nav class="nav-container">
   <ul class="nav-list">
-    <li><a href="#">Inicio</a></li>
+    <li><a href="index.html">Inicio</a></li>
     <li><a href="uniCuyo.html">Sobre nosotros</a></li>
     <li><a href="detalle_carrera.html">Buscar uni</a></li>
     <li><a href="#">Comparador</a></li>
