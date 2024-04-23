@@ -34,7 +34,10 @@ botonBuscar.addEventListener('click', function() {
 /* Esto agrega bootstrap (usado cuando menos para obtener los íconos de las redes sociales) en todas las páginas. */
 
 const head = document.querySelector("head");
-head.innerHTML += '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">';
+head.innerHTML += `
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="icon" type="image/x-icon" href="./img/favicon/favicon.ico">
+`;
 
 /* HEADER y FOOTER reutilizables por todas las páginas. */
 /* 
@@ -271,19 +274,18 @@ inputUniversidad.addEventListener('keyup', (event) => {
 
 // PARA LA SECCION "CARRERAS MÁS BUSCADAS" DE LA PÁGINA PRINCIPAL.
 
-// OBTENCIÓN DE DATOS DEL ARCHIVO LOCAL PSEUDO BBDD.
-
-let dataLocal = null;
-
-fetch('js/carreras.json')
-  .then(response => response.json())
-  .then(data => guardarData(data))
-  .catch(error => console.log(error));
-
-//Toda la info de las carreras (en el json) ahora en el objeto data.
-function guardarData(data) {
-  dataLocal = data;
+// CONECTA CON LA BD Y LLAMA A UNA FUNCIÓN ESPECÍFICA.
+async function buscar_en_bd(carrera){
+  await fetch('./js/carreras.json')
+    .then(response => response.json())
+    .then(data => {mostrarCarrerasSegunClave(data, carrera);})
+    .catch(error => console.log(error));
 }
+
+// Esto es para que al cargar la página se muestren inicialmente carreras de PROGRAMACION (en tarjetas).
+const linkProgInicial = document.querySelector("#programacion");
+ajustarEstilosBotones(linkProgInicial);
+buscar_en_bd("unsl");
 
 // IDENTIFICACIÓN DEL SECTOR DE LA PÁGINA QUE CONTIENE LAS CARRERAS.
 const carrerasActuales = document.querySelector(".carreras-list");
@@ -294,29 +296,28 @@ const carrerasActuales = document.querySelector(".carreras-list");
 const linkAdm = document.querySelector("#administracion");
 linkAdm.addEventListener("click", (event) => {
   ajustarEstilosBotones(linkAdm);
-  mostrarCarrerasSegunClave(dataLocal, "administra"); //Mandamos la fuente de datos y la palabra clave.
+  buscar_en_bd("administra");
 });
 
 // PROGRAMACION
 const linkProg = document.querySelector("#programacion");
 linkProg.addEventListener("click", (event) => {
   ajustarEstilosBotones(linkProg);
-  mostrarCarrerasSegunClave(dataLocal, "unsl"); //Mandamos la fuente de datos y la palabra clave.
-  //MEJORAR LA CLAVE ACA!!!!!!!!!!!!!!!!!!
+  buscar_en_bd("unsl"); //MEJORAR LA CLAVE ACA!!!!!!!!!!!!!!!!!!
 });
 
 // CONTABILIDAD
 const linkConta = document.querySelector("#contabilidad");
 linkConta.addEventListener("click", (event) => {
   ajustarEstilosBotones(linkConta);
-  mostrarCarrerasSegunClave(dataLocal, "conta"); //Mandamos la fuente de datos y la palabra clave.
+  buscar_en_bd("conta");
 });
 
 // DERECHO
 const linkDer = document.querySelector("#derecho");
 linkDer.addEventListener("click", (event) => {
   ajustarEstilosBotones(linkDer);
-  mostrarCarrerasSegunClave(dataLocal, "aboga"); //Mandamos la fuente de datos y la palabra clave.
+  buscar_en_bd("aboga");
 });
 
 //Pone estilos de ACTIVO a elementoBuscado y de INACTIVO a sus hermanos.
@@ -357,18 +358,18 @@ function mostrarCarrerasSegunClave(carreras, carreraBuscada) {
         <h3 class="carrera-card-title">${arregloCarreras[i][1]}</h3>
         <div class="carrera-card-details">
           <div class="carrera-card-detail">
-            <img src="img/agenda.png" alt="" class="carrera-card-detail-icon" loading="lazy" />
+            <i class="bi bi-card-list"></i>
             <span class="carrera-card-detail-text">${arregloCarreras[i][2]} Materias</span>
           </div>
           <div class="carrera-card-detail">
-            <img src="img/reloj.png" alt="" class="carrera-card-detail-icon" loading="lazy" />
+            <i class="bi bi-clock"></i>
             <span class="carrera-card-detail-text">${arregloCarreras[i][3]} Semanas</span>
           </div>
         </div>
         <div class="carrera-card-footer">
           <span class="carrera-card-price">A partir de: ${arregloCarreras[i][4]}</span>
           <div class="carrera-card-rating">
-            <img src="img/estrella.png" alt="" class="carrera-card-rating-icon" loading="lazy" />
+            <i class="bi bi-star-fill"></i>
             <span class="carrera-card-rating-text">${arregloCarreras[i][5]}</span>
           </div>
         </div>
