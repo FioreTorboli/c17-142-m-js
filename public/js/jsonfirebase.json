@@ -1,0 +1,217 @@
+{
+    "carreras": [
+      {
+        "id": 1,
+        "nombre": "Programación",
+        "carrerauno": "Tecnicatura en Programación",
+        "duracionuno": "2 años",
+        "materiasuno": "24 materias",
+        "tipouno": "Tecnicatura",
+        "modalidaduno": "Presencial - A distancia",
+        "carrerados": "Tecnicatura en Desarrollador de Software",
+        "duraciondos": "3 años",
+        "materiasdos": "36 materias",
+        "tipodos": "Tecnicatura",
+        "modalidaddos": "Presencial - A distancia",
+        "carreratres": "Ingeniería en Computación",
+        "duraciontres": "5 años",
+        "materiastres": "60 materias",
+        "tipotres": "Ingeniería",
+        "modalidadtres": "Presencial",
+        "carreracuatro": "Licenciatura en Informática",
+        "duracioncuatro": "5 años",
+        "materiascuatro": "54 materias",
+        "tipocuatro": "Licenciatura",
+        "modalidadcuatro": "Presencial",
+        "carreracinco": "Ingenieria en Sistemas",
+        "duracioncinco": "5 años",
+        "materiascinco": "60 materias",
+        "tipocinco": "Ingeniería",
+        "modalidadcinco": "Presencial",
+        "universidaduno": "Universidad Nacional de San Luis",
+        "universidaddos": "Universidad Siglo 21",
+        "universidadtres": "Universidad Católica de Cuyo",
+        "universidadcuatro": "Universidad Nacional de Villa Mercedes",
+        "universidadcinco": "Universidad de La Punta"
+      },
+      {
+        "id": 2,
+        "nombre": "Arquitectura",
+        "carrerauno": "Arquitectura",
+        "duracionuno": "5 años",
+        "materiasuno": "60 materias",
+        "tipouno": "Licenciatura",
+        "modalidaduno": "Presencial",
+        "carrerados": "Arquitectura y Urbanismo",
+        "duraciondos": "6 años",
+        "materiasdos": "72 materias",
+        "tipodos": "Licenciatura",
+        "modalidaddos": "Presencial",
+        "carreratres": "Arquitectura de Interiores",
+        "duraciontres": "4 años",
+        "materiastres": "48 materias",
+        "tipotres": "Técnico Superior",
+        "modalidadtres": "Presencial",
+        "carreracuatro": "Diseño de Paisaje",
+        "duracioncuatro": "3 años",
+        "materiascuatro": "36 materias",
+        "tipocuatro": "Técnico",
+        "modalidadcuatro": "Presencial",
+        "carreracinco": "Diseño de Edificios Sustentables",
+        "duracioncinco": "3 años",
+        "materiascinco": "36 materias",
+        "tipocinco": "Técnico",
+        "modalidadcinco": "Presencial",
+        "universidaduno": "Universidad Nacional de San Luis",
+        "universidaddos": "Universidad de La Punta",
+        "universidadtres": "Universidad Siglo 21",
+        "universidadcuatro": "Universidad de La Punta",
+        "universidadcinco": "Universidad Nacional de Cuyo"
+      },
+      {
+        "id": 3,
+        "nombre": "Ingeniería Civil",
+        "carrerauno": "Ingeniería Civil",
+        "duracionuno": "5 años",
+        "materiasuno": "60 materias",
+        "tipouno": "Ingeniería",
+        "modalidaduno": "Presencial",
+        "carrerados": "Técnico Superior en Construcciones",
+        "duraciondos": "3 años",
+        "materiasdos": "36 materias",
+        "tipodos": "Técnico Superior",
+        "modalidaddos": "Presencial",
+        "carreratres": "Técnico en Construcciones Civiles",
+        "duraciontres": "2 años",
+        "materiastres": "24 materias",
+        "tipotres": "Técnico",
+        "modalidadtres": "Presencial",
+        "carreracuatro": "Ingeniería en Recursos Hídricos",
+        "duracioncuatro": "5 años",
+        "materiascuatro": "60 materias",
+        "tipocuatro": "Ingeniería",
+        "modalidadcuatro": "Presencial",
+        "carreracinco": "Técnico en Obras Viales",
+        "duracioncinco": "3 años",
+        "materiascinco": "36 materias",
+        "tipocinco": "Técnico",
+        "modalidadcinco": "Presencial",
+        "universidaduno": "Universidad Nacional de San Luis",
+        "universidaddos": "Universidad Nacional de Cuyo",
+        "universidadtres": "Universidad Nacional del Litoral",
+        "universidadcuatro": "Universidad de La Punta",
+        "universidadcinco": "Universidad Católica de Cuyo"
+      },
+      {
+        "id": 4,
+        "nombre": "Medicina",
+        "carrerauno": "Medicina",
+        "duracionuno": "6 años",
+        "materiasuno": "72 materias",
+        "tipouno": "Carrera de Grado",
+        "modalidaduno": "Presencial",
+        "carrerados": "Enfermería",
+        "duraciondos": "4 años",
+        "materiasdos": "48 materias",
+        "tipodos": "Carrera de Grado",
+        "modalidaddos": "Presencial",
+        "carreratres": "Kinesiología",
+        "duraciontres": "5 años",
+        "materiastres": "60 materias",
+        "tipotres": "Carrera de Grado",
+        "modalidadtres": "Presencial",
+        "carreracuatro": "Nutrición",
+        "duracioncuatro": "4 años",
+        "materiascuatro": "48 materias",
+        "tipocuatro": "Carrera de Grado",
+        "modalidadcuatro": "Presencial",
+        "carreracinco": "Odontología",
+        "duracioncinco": "5 años",
+        "materiascinco": "60 materias",
+        "tipocinco": "Carrera de Grado",
+        "modalidadcinco": "Presencial",
+        "universidaduno": "Universidad Nacional de San Luis",
+        "universidaddos": "Universidad Nacional de Cuyo",
+        "universidadtres": "Universidad Católica de Cuyo",
+        "universidadcuatro": "Universidad Siglo 21",
+        "universidadcinco": "Universidad de La Punta"
+      }
+    
+    ],
+    
+    "universidades": [
+      { 
+        "id": 1, 
+        "nombre": "Universidad Nacional De San Luis"
+      },
+      { 
+        "id": 2, 
+        "nombre": "Universidad Siglo 21"
+      },
+      { 
+        "id": 3, 
+        "nombre": "Universidad Católica de Cuyo - Sede San Luis"
+      },
+      { 
+        "id": 4, 
+        "nombre": "Universidad de La Punta"
+      },
+      { 
+        "id": 5, 
+        "nombre": "Universidad Provincial de Oficios \"Eva Perón\""
+      },
+      { 
+        "id": 6, 
+        "nombre": "Universidad Nacional de Villa Mercedes"
+      },
+      { 
+        "id": 7, 
+        "nombre": "Universidad Nacional de San Luis - Villa Mercedes"
+      },
+      { 
+        "id": 8, 
+        "nombre": "Universidad Provincial de Oficios \"Santiago del Estero\""
+      },
+      { 
+        "id": 9, 
+        "nombre": "Universidad Nacional de San Luis - Villa de la Quebrada"
+      },
+      { 
+        "id": 10, 
+        "nombre": "Universidad Nacional de San Luis - Villa Reynolds"
+      },
+      { 
+        "id": 11, 
+        "nombre": "Universidad Provincial de Oficios \"Juan Domingo Perón\""
+      },
+      { 
+        "id": 12, 
+        "nombre": "Instituto Nacional de Educación Tecnológica (INET) - Sede San Luis"
+      },
+      { 
+        "id": 13, 
+        "nombre": "Instituto Superior de Educación Técnica N° 2 - Sede Villa Mercedes"
+      },
+      { 
+        "id": 14, 
+        "nombre": "Instituto Superior de Seguridad Pública"
+      },
+      { 
+        "id": 15, 
+        "nombre": "Escuela de Música y Danza Nº 1 \"Juan Crisóstomo Lafinur\""
+      },
+      { 
+        "id": 16, 
+        "nombre": "Instituto Universitario de Seguridad Pública"
+      },
+      { 
+        "id": 17, 
+        "nombre": "Escuela de Gobierno y Política Pública"
+      },
+      { 
+        "id": 18, 
+        "nombre": "Centro Educativo Nº 1 \"Francisco Narciso Laprida\""
+      }
+    ]
+  }
+  
