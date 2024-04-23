@@ -1,21 +1,16 @@
-// PRUEBAS DOM PARA VER SI ME PUEDO TRAER ELEMENTOS DE BUSCACARRERA.HTML
-// document.addEventListener('DOMContentLoaded', function() {
-  
-//   const elemento = document.querySelector('.btm');
-//   if (elemento) {
-   
-//       console.log("Elemento boton de buscacarrera encontrado:", elemento);
-//   } else {
-//       console.log("Elemento boton de buscacarrera no encontrado");
-//   }
-//   const elemento2 = document.querySelector('.search-title');
-//   if (elemento2) {
-   
-//       console.log("Elemento titulo de index encontrado:", elemento);
-//   } else {
-//       console.log("Elemento titulo de index no encontrado");
-//   }
-// });
+
+
+const nav= document.querySelector("#nav-container");
+const open= document.querySelector("#open-menu");
+const close= document.querySelector("#close-menu");
+
+open.addEventListener("click", () => {
+  nav.classList.add("visible");
+})
+
+close.addEventListener("click", () => {
+  nav.classList.remove("visible");
+})
 
 
 //PARA PROBAR FUNCIONALIDAD BUSCADOR
@@ -42,7 +37,7 @@ const head = document.querySelector("head");
 head.innerHTML += '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">';
 
 /* HEADER y FOOTER reutilizables por todas las páginas. */
-
+/* 
 const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 
@@ -102,7 +97,7 @@ footer.innerHTML = `
   </ul>
 </div>
 `;
-
+ */
 /////////////////////////////////////////////////BUSCADOR - LANDING//////////////////////////////////////////////////////////////
 
 
