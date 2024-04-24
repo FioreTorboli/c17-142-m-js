@@ -792,7 +792,7 @@ header {
 .carrera-card-image {
   aspect-ratio: 1.27;
   border: 1px solid #fff;
-  object-fit: auto;
+  object-fit: scale-down;
   object-position: center;
   width: 100%;
 }
@@ -1066,7 +1066,7 @@ header {
 .benefits-title {
   color: #374493;;
   text-align: center;
-/*   align-self: center; */
+  align-self: center;
   font: 700 3em/120% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
@@ -1138,6 +1138,7 @@ header {
  /*  align-items: start; */
   width: 100%;
   height: 13em;
+  position: relative;
 }
 
 @media (max-width: 991px) {
@@ -1174,11 +1175,30 @@ header {
 
 .benefit-icon {
   /* aspect-ratio: 0.5; */
-  object-fit: auto;
-  object-position: center;
-  
-  width: 3em;
+  object-fit: scale-down;
+  object-position: left;
+  width: 2.5em;
   margin: 1em;
+}
+
+.benefit-icon-3 {
+  /* aspect-ratio: 0.5; */
+  object-fit: scale-down;
+  object-position: left;
+  width: 2.4em;
+  margin: 1.2em;
+}
+
+@media (max-width: 991px){
+  .benefit-icon{
+    width: 1.5em;
+    margin-left: 0;
+  }
+
+  .benefit-icon-3{
+    width: 1.5em;
+    margin-left: 0.5em;
+  }
 }
 
 .benefit-header-content img{
@@ -1191,11 +1211,7 @@ header {
   /* align-self: end; */
 }
 
-@media (max-width: 991px){
-  .benefit-icon{
-    width: 2.7em;
-  }
-}
+
 
 /*   .benefit-header-content {
     display: flex;
@@ -1208,19 +1224,25 @@ header {
   } */
 
   .benefit-header-image {
-    /* position: relative; */
-   /*  top: 3em; */
-    aspect-ratio: 1.32;
-   /*  object-fit: auto; */
-    /* object-position: center; */
-    width: 3.0625em;
-    /* align-self: end; */
+    object-fit: scale-down;
+    object-position: center;
+    width: 3em;
+    align-self: end;
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding-top: 1em;
+    padding-right: 1em;
   }
   
-
 @media (max-width: 991px){
   .benefit-header-image{
-    width: 2em;
+    width: 2.5em;
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding-top: 1em;
+    padding-right: 1em;
   }
 }
 
@@ -1230,15 +1252,20 @@ header {
     flex-basis: auto; */
     /* margin: 2em auto; */
     display: flex;
-
+    font-size: 1em;
     margin-left: -0.5em;
-    margin-top: -0.5em;
+    margin-top: -1em;
 
 }
 
 @media (max-width: 991px){
   .benefit-title{
-    font-size: 0.6em;
+    font-size: 0.8em;
+    text-align: center;
+    margin-left: -1.5em;
+    margin-top: -1.7em;
+    margin-right: 0.5em;
+    
   }
 }
 
@@ -1275,10 +1302,13 @@ header {
   justify-content: center;
   align-items: center;
   padding-left: 2.1em;
+  margin-left: -0.5em;
 }
 @media (max-width: 991px){
   .benefit-title-2{
     font-size: 1em;
+    text-align: center;
+    margin-left: -1.5em;
   }
   }
 
@@ -1298,11 +1328,14 @@ header {
   justify-content: center;
   align-items: center;
   padding-left: 1.9em;
+  margin-left: -1em;
 }
 
 @media (max-width: 991px){
   .benefit-title-3{
-    font-size: 0.8em;
+    font-size: 1em;
+    text-align: center;
+    margin-left: -2em;
   }
   }
 
@@ -1508,7 +1541,7 @@ footer {
 
 @media (max-width: 991px) {
   .footer-title {
-    margin-top: 40px;
+    margin-top: 0.5em;
   }
 }
 
@@ -1520,7 +1553,7 @@ footer {
 
 @media (max-width: 991px) {
   .footer-address {
-    margin-top: 40px;
+    margin-top: -3em;
   }
 }
 
@@ -1531,19 +1564,10 @@ footer {
 
 @media (max-width: 991px) {
   .footer-links {
-    margin-top: 40px;
+    margin-top: -2em;
   }
 }
 
-/* NO HAY NADA QUE USE ESTA CLASE - BORRABLE */
-/* .footer-logo {
-  width: 205px;
-  max-width: 100%;
-  margin-top: 1em;
-  aspect-ratio: 5;
-  object-fit: auto;
-  object-position: center;
-} */
 
 /* REDES SOCIALES */
 
@@ -1557,6 +1581,7 @@ footer {
   border-radius: 15px;
 }
 
+
 .social-buttons-list {
   position: absolute;
   top: 50%;
@@ -1565,6 +1590,21 @@ footer {
   margin: 0;
   padding: 0;
   display: flex;
+}
+
+@media (max-width: 991px){
+  .social-buttons{
+    margin-top: -1em;
+    width: 80%;
+    padding: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-buttons-list{
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .social-buttons-list li {
