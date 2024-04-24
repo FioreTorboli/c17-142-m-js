@@ -1,7 +1,3 @@
-Antes de arrancar, el contenido del navbar es viejo, actualizarlo con los <li> y <a href> correspondientes!
-
-
-
 ----- PARA INCORPORAR HEADER Y FOOTER A CADA PÁGINA: -----
 
 ** Agregar ajax al HEAD de cada página donde se necesite que hayax (entendés? hayax, jaja) un header (que incluye logo, nombre y navbar) y un footer:
@@ -14,28 +10,32 @@ Antes de arrancar, el contenido del navbar es viejo, actualizarlo con los <li> y
 
 ------------------------------------------
 
-** Ponerles id a los elementos que alojarán el contenido externo.
-Estos elementos deberían estar vacíos (nada entre las etiquetas de apertura y cierre).
-Si hay estilos aplicados a estos elementos, los nombres de clase se ponen a continuación del id.
+** Reemplazar los tags (el contenido que está entre ellos se borra):
+<header></header>
+<footer></footer>
 
-<header id="navbar"> o <header id="navbar" class="pindonga">
-</header>
+Por:
+<div id="header"></div>
+<div id="footer"></div>
 
-<footer id="footer">
-</footer>
+Estos div deberían estar vacíos (nada entre las etiquetas de apertura y cierre).
 
 ------------------------------------------
 
 ** Incorporar esto antes del cierre del body ( </body> ):
 
 <script>
-    $("#navbar").load("./header.html");
+    $("#header").load("./header.html");
     $("#footer").load("./footer.html");
 </script>
 
 ------------------------------------------
 
-** EXTRA:
+Cualquier cambio en la estructura de header/menú o footer, o incorporación de estilos (para lo cual hay que agregar nombres de clases) se haría directamente en los archivos header.html o footer.html.
+
+------------------------------------------
+
+** EXTRA (también, para cada página):
 
 Incorporar en el HEAD al ícono de la página:
 
